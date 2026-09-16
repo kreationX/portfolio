@@ -514,6 +514,120 @@ footer .copyright{
 @media(max-width:900px){.ek-footer-grid{grid-template-columns:1fr 1fr;gap:42px 35px}}
 @media(max-width:600px){.ek-footer{padding:45px 22px 20px!important}.ek-footer-grid{grid-template-columns:1fr;gap:32px}.ek-footer-logo{width:78px!important;height:78px!important}.ek-venture{padding:23px 20px!important;margin-top:38px!important}.ek-venture h3{font-size:22px!important}.ek-footer-bottom{margin-top:30px}}
 
+
+/* ===== EK FINAL FOOTER OVERRIDE ===== */
+footer.ek-footer{
+  margin-left:0 !important;
+  border-top:0 !important;
+  display:block !important;
+  box-sizing:border-box !important;
+  width:100% !important;
+  padding:64px 7vw 24px !important;
+  background:#0b3ba8 !important;
+  color:#fff !important;
+}
+footer.ek-footer *, footer.ek-footer *::before, footer.ek-footer *::after{box-sizing:border-box}
+footer.ek-footer .ek-footer-grid{
+  width:100% !important;max-width:1400px !important;margin:0 auto !important;
+  display:grid !important;grid-template-columns:1.5fr .85fr 1fr 1.15fr !important;
+  gap:58px !important;align-items:start !important;
+}
+footer.ek-footer .ek-footer-brand{max-width:440px !important}
+footer.ek-footer .ek-footer-logo{
+  width:96px !important;height:96px !important;max-width:none !important;
+  object-fit:contain !important;display:block !important;margin:0 0 18px !important;
+}
+footer.ek-footer .ek-footer-brand h3{
+  margin:0 0 11px !important;color:#fff !important;font-size:22px !important;
+  line-height:1.3 !important;font-weight:700 !important;
+}
+footer.ek-footer .ek-footer-brand>p{
+  margin:0 !important;color:rgba(255,255,255,.9) !important;font-size:16px !important;
+  line-height:1.75 !important;font-weight:400 !important;
+}
+footer.ek-footer .ek-footer-column{
+  display:flex !important;flex-direction:column !important;align-items:flex-start !important;
+  gap:16px !important;min-width:0 !important;
+}
+footer.ek-footer .ek-footer-column h4{
+  margin:0 0 9px !important;color:#fff !important;font-size:19px !important;
+  line-height:1.35 !important;font-weight:700 !important;
+}
+footer.ek-footer .ek-footer-column>a{
+  margin:0 !important;color:rgba(255,255,255,.9) !important;font-size:16px !important;
+  line-height:1.45 !important;font-weight:500 !important;text-decoration:none !important;
+  white-space:normal !important;
+}
+footer.ek-footer .ek-footer-column>a:hover{color:#fff !important;transform:translateX(3px)}
+footer.ek-footer .ek-follow .socials{
+  display:flex !important;flex-wrap:wrap !important;gap:13px !important;margin:0 !important;
+}
+footer.ek-footer .ek-follow .socials a{
+  width:54px !important;height:54px !important;display:grid !important;place-items:center !important;
+  border:1px solid rgba(255,255,255,.3) !important;border-radius:50% !important;
+  color:#fff !important;font-size:18px !important;text-decoration:none !important;
+}
+footer.ek-footer .ek-follow .socials a:hover{
+  background:#7317c8 !important;border-color:#7317c8 !important;transform:translateY(-3px)
+}
+footer.ek-footer .ek-venture{
+  width:100% !important;max-width:1400px !important;margin:52px auto 0 !important;
+  padding:30px 32px !important;border:1px solid rgba(255,255,255,.26) !important;
+  border-radius:18px !important;background:rgba(255,255,255,.08) !important;
+  box-shadow:none !important;text-align:left !important;display:block !important;
+}
+footer.ek-footer .ek-venture span{
+  display:block !important;margin:0 0 7px !important;color:#d9bdff !important;
+  font-size:12px !important;line-height:1.3 !important;font-weight:700 !important;
+  letter-spacing:.12em !important;text-transform:uppercase !important;
+}
+footer.ek-footer .ek-venture h3{
+  margin:0 0 7px !important;color:#fff !important;font-size:26px !important;
+  line-height:1.3 !important;font-weight:700 !important;
+}
+footer.ek-footer .ek-venture h3 em{color:#d9bdff !important;font-style:normal !important;font-weight:600 !important}
+footer.ek-footer .ek-venture strong{
+  display:block !important;margin:0 !important;color:#fff !important;font-size:17px !important;
+  line-height:1.5 !important;font-weight:700 !important;
+}
+footer.ek-footer .ek-venture p{
+  margin:4px 0 12px !important;color:rgba(255,255,255,.86) !important;font-size:15px !important;
+  line-height:1.65 !important;font-weight:400 !important;
+}
+footer.ek-footer .ek-venture-link{
+  display:inline-block !important;margin:0 !important;color:#fff !important;font-size:15px !important;
+  line-height:1.5 !important;font-weight:700 !important;text-decoration:none !important;
+}
+footer.ek-footer .ek-venture-link:hover{color:#d9bdff !important;transform:translateX(3px)}
+footer.ek-footer .ek-footer-bottom{
+  width:100% !important;max-width:1400px !important;margin:38px auto 0 !important;
+  padding:21px 0 0 !important;border-top:1px solid rgba(255,255,255,.2) !important;
+  text-align:center !important;
+}
+footer.ek-footer .ek-footer-bottom p{
+  margin:0 !important;color:rgba(255,255,255,.94) !important;font-size:16px !important;
+  line-height:1.5 !important;font-weight:700 !important;
+}
+@media(max-width:900px){
+  footer.ek-footer .ek-footer-grid{grid-template-columns:1fr 1fr !important;gap:42px 34px !important}
+}
+@media(max-width:600px){
+  footer.ek-footer{padding:48px 22px 22px !important}
+  footer.ek-footer .ek-footer-grid{grid-template-columns:1fr !important;gap:34px !important}
+  footer.ek-footer .ek-footer-logo{width:84px !important;height:84px !important}
+  footer.ek-footer .ek-venture{margin-top:40px !important;padding:24px 21px !important}
+  footer.ek-footer .ek-venture h3{font-size:22px !important}
+  footer.ek-footer .ek-footer-bottom{margin-top:30px !important}
+}
+
+/* FINAL: Venture label and title must be WHITE */
+footer.ek-footer .ek-venture span,
+footer.ek-footer .ek-venture h3,
+footer.ek-footer .ek-venture h3 em {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
 </style>
 </head>
 <body>
@@ -711,7 +825,9 @@ footer .copyright{
     </div>
     <div class="ek-footer-column">
       <h4>Get Started</h4>
-      <a href="#contact">Start a Project</a><a href="#talent">Apply as a Talent</a><a href="#affiliate">Affiliate</a><a href="#contact">Contact Us</a>
+      <a href="#talent">Apply as a Talent</a>
+      <a href="#affiliate">Affiliate</a>
+      <a href="#contact">Contact Us</a>
     </div>
     <div class="ek-footer-column ek-follow">
       <h4>Follow Eaglesight Kreation</h4>
