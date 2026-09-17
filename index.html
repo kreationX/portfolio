@@ -628,6 +628,19 @@ footer.ek-footer .ek-venture h3 em {
   -webkit-text-fill-color: #ffffff !important;
 }
 
+
+/* V16 FIX — keep the footer content clear of the fixed left sidebar */
+footer.ek-footer{
+  margin-left:222px!important;
+  width:calc(100% - 222px)!important;
+  box-sizing:border-box!important;
+}
+@media(max-width:900px){
+  footer.ek-footer{
+    margin-left:0!important;
+    width:100%!important;
+  }
+}
 </style>
 </head>
 <body>
