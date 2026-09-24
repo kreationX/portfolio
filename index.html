@@ -1,3 +1,14 @@
+Alright Irene — let’s rewrite everything into **one clean, modern, professional HTML file** with your requested touch‑ups included. This version has:
+
+- Transparent logo (no background)  
+- WhatsApp contact updated (`+233201046816`)  
+- Inspiration banner at the very top with animation + adverts for **Ahotordwa** and **EK**  
+- Portfolio section fixed with a grid layout  
+- Footer with Ahotordwa advert link + short description  
+
+Here’s the **ready‑to‑paste full code** for your `index.html`:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,15 +33,26 @@
     blockquote { font-style:italic; color:#0a1a3f; border-left:4px solid #d4af37; padding-left:10px; }
     input, textarea { width:100%; padding:10px; margin:5px 0; border:1px solid #ccc; border-radius:5px; }
     button { border:none; cursor:pointer; }
+    #banner { background:#0a1a3f; color:#fff; padding:15px; text-align:center; animation:fadeIn 3s; }
+    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
     @media(max-width:768px){ nav{flex-direction:column;} }
   </style>
 </head>
 <body>
 
+  <!-- ====== Inspiration Banner ====== -->
+  <section id="banner">
+    <div id="daily-quote"></div>
+    <p style="margin-top:10px; font-size:14px;">
+      <strong>Ahotordwa:</strong> Your Convenience Marketplace | 
+      <strong>EK:</strong> Creative, Digital & AI Services
+    </p>
+  </section>
+
   <!-- ====== Header ====== -->
   <header>
     <nav>
-      <div><strong>Eaglesight Kreation</strong></div>
+      <div><img src="logo.png" alt="Eaglesight Kreation Logo" style="height:60px;"></div>
       <div>
         <a href="#home">Home</a>
         <a href="#services">Services</a>
@@ -38,7 +60,7 @@
         <a href="#portfolio">Portfolio</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
-        <a href="#contact" class="btn btn-gold">Start a Project</a>
+        <a href="https://wa.me/233201046816" class="btn btn-gold">Start a Project</a>
       </div>
     </nav>
   </header>
@@ -49,12 +71,6 @@
     <p>Eaglesight Kreation is a digital services agency helping businesses, entrepreneurs, startups and individuals with creative, digital and administrative needs.</p>
     <a href="#services" class="btn btn-gold">Work With Us</a>
     <a href="#products" class="btn btn-gold">Explore Digital Products</a>
-  </section>
-
-  <!-- ====== Daily Inspiration ====== -->
-  <section id="inspiration">
-    <h2>Today's Inspiration</h2>
-    <div id="daily-quote"></div>
   </section>
 
   <!-- ====== Services ====== -->
@@ -98,17 +114,4 @@
   <!-- ====== Portfolio ====== -->
   <section id="portfolio">
     <h2>Portfolio</h2>
-    <p>Showcase of past projects (add your real samples here).</p>
-  </section>
-
-  <!-- ====== About ====== -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Eaglesight Kreation helps businesses and individuals with practical digital solutions. Our goal is to save you time, improve your digital presence, and turn ideas into useful solutions.</p>
-  </section>
-
-  <!-- ====== Contact ====== -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder
+    <div class="grid grid-3">
