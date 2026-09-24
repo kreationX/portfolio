@@ -3,905 +3,112 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Eaglesight Kreation — Digital services agency offering Virtual Assistance, Graphic Design, Web Development, Digital Marketing, AI Support, and UI/UX Design alongside affordable ready-made digital products.">
-  <title>Eaglesight Kreation | Digital Agency & Digital Products</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  
+  <title>Eaglesight Kreation</title>
   <style>
-    :root {
-      --navy: #071321;
-      --navy-light: #0b3ba8;
-      --gold: #d7b45a;
-      --gold-light: #f0d889;
-      --accent-purple: #7317c8;
-      --bg-light: #f7f9fc;
-      --card-bg: #ffffff;
-      --text-main: #111827;
-      --text-muted: #465568;
-      --border-line: rgba(11, 59, 168, 0.14);
-      --shadow: 0 18px 45px rgba(0, 0, 0, 0.06);
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: "Inter", sans-serif;
-      background: var(--bg-light);
-      color: var(--text-main);
-      line-height: 1.65;
-      font-size: 15px;
-      overflow-x: hidden;
-    }
-
-    a { color: inherit; text-decoration: none; }
-    button { font: inherit; cursor: pointer; border: none; }
-
-    /* Top Announcement Ticker */
-    .topbar {
-      position: fixed; top: 0; left: 0; right: 0; height: 38px; z-index: 1000;
-      background: #ffffff; border-bottom: 1px solid var(--border-line);
-      display: flex; align-items: center; justify-content: center;
-    }
-    .ticker { text-align: center; font-size: 13px; color: var(--text-muted); }
-    .ticker b { color: var(--navy-light); font-weight: 600; }
-
-    /* Fixed Left Sidebar Navigation */
-    .sidebar {
-      position: fixed; top: 38px; left: 0; bottom: 0; width: 230px; z-index: 900;
-      background: var(--navy); border-right: 1px solid rgba(215, 180, 90, 0.25);
-      padding: 30px 20px 24px; display: flex; flex-direction: column;
-    }
-    .logo-wrap { display: flex; align-items: center; gap: 12px; padding-bottom: 30px; }
-    .brand-title { font-family: "Source Sans 3", sans-serif; font-weight: 700; color: #ffffff; font-size: 18px; line-height: 1.1; }
-    .brand-title small { display: block; color: var(--gold); font-size: 10px; font-weight: 500; letter-spacing: 1px; margin-top: 4px; }
-    
-    .nav { display: flex; flex-direction: column; gap: 4px; }
-    .nav a {
-      color: rgba(255, 255, 255, 0.82); padding: 11px 12px; border-radius: 8px;
-      font-size: 14px; font-weight: 500; transition: 0.25s ease; display: flex; align-items: center; gap: 10px;
-    }
-    .nav a:hover, .nav a.active { background: rgba(215, 180, 90, 0.15); color: #ffffff; }
-    .nav a.active { border-left: 3px solid var(--gold); }
-    .nav-cta { margin-top: 15px; background: var(--accent-purple) !important; color: #fff !important; text-align: center; justify-content: center; }
-
-    .side-bottom { margin-top: auto; }
-    .side-bottom p { font-size: 12px; color: rgba(255, 255, 255, 0.6); margin-bottom: 8px; }
-
-    /* Mobile Header */
-    .mobile-head {
-      display: none; position: fixed; top: 38px; left: 0; right: 0; height: 60px; z-index: 950;
-      background: var(--navy); border-bottom: 1px solid var(--border-line);
-      align-items: center; justify-content: space-between; padding: 0 18px; color: #fff;
-    }
-    .mobile-brand { font-family: "Source Sans 3", sans-serif; font-size: 17px; font-weight: 700; color: #fff; }
-    .mobile-nav-toggle { font-size: 24px; color: var(--gold); background: transparent; }
-
-    /* Mobile Menu Drawer */
-    .mobile-drawer {
-      display: none; position: fixed; top: 98px; left: 0; right: 0; background: var(--navy);
-      border-bottom: 2px solid var(--gold); padding: 20px; z-index: 940; flex-direction: column; gap: 10px;
-    }
-    .mobile-drawer.open { display: flex; }
-    .mobile-drawer a { color: #fff; padding: 10px; font-size: 15px; border-radius: 6px; }
-    .mobile-drawer a:hover { background: rgba(215, 180, 90, 0.15); }
-
-    /* Layout Main Area */
-    main { margin-left: 230px; padding-top: 38px; }
-    section { padding: 80px 6vw; position: relative; }
-    .container { max-width: 1160px; margin: auto; }
-
-    /* Typography & Core Styling */
-    .eyebrow {
-      color: var(--accent-purple); font-size: 12px; text-transform: uppercase;
-      letter-spacing: 2.2px; font-weight: 700; margin-bottom: 12px; display: block;
-    }
-    h1, h2, h3 { font-family: "Source Sans 3", sans-serif; color: var(--text-main); }
-    h1 { font-size: clamp(40px, 4.8vw, 62px); line-height: 1.08; font-weight: 700; letter-spacing: -1.5px; }
-    h2 { font-size: clamp(28px, 3.2vw, 42px); line-height: 1.15; font-weight: 700; letter-spacing: -0.5px; }
-    h3 { font-size: 20px; font-weight: 600; line-height: 1.3; }
-    .lead { font-size: 17px; color: var(--text-muted); max-width: 720px; margin-top: 20px; }
-
-    /* Buttons */
-    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      padding: 12px 22px; border-radius: 7px; font-weight: 600; font-size: 14px;
-      transition: 0.25s ease;
-    }
-    .btn-primary { background: var(--accent-purple); color: #ffffff; }
-    .btn-primary:hover { background: #5e10a9; transform: translateY(-2px); }
-    .btn-secondary { background: var(--navy-light); color: #ffffff; }
-    .btn-secondary:hover { background: #082f88; transform: translateY(-2px); }
-    .btn-whatsapp { background: #25d366; color: #10243a; font-weight: 700; width: 100%; margin-top: 12px; }
-    .btn-whatsapp:hover { background: #20ba5a; }
-
-    /* Hero Section */
-    .hero { min-height: calc(100vh - 38px); display: flex; align-items: center; background: #ffffff; }
-    .gold-line { width: 68px; height: 3px; background: var(--gold); margin-top: 24px; }
-
-    /* Daily Inspiration Feature */
-    .daily-inspiration {
-      background: linear-gradient(135deg, var(--navy) 0%, #0d2542 100%);
-      color: #ffffff; border-radius: 16px; padding: 36px; margin-top: 50px;
-      border: 1px solid rgba(215, 180, 90, 0.3); box-shadow: var(--shadow);
-    }
-    .inspiration-tag { color: var(--gold); font-size: 11px; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; margin-bottom: 12px; display: block; }
-    .quote-text { font-family: "Source Sans 3", sans-serif; font-size: 22px; font-weight: 600; line-height: 1.4; color: #ffffff; }
-    .quote-author { color: var(--gold-light); font-size: 14px; margin-top: 12px; font-weight: 500; text-align: right; }
-
-    /* Services Section */
-    .services { background: #eef3f9; }
-    .section-head { margin-bottom: 40px; }
-    .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .service-card {
-      background: var(--card-bg); border: 1px solid var(--border-line);
-      border-radius: 14px; padding: 28px; transition: 0.3s ease;
-    }
-    .service-card:hover { transform: translateY(-5px); border-color: var(--accent-purple); box-shadow: var(--shadow); }
-    .service-card i { font-size: 30px; color: var(--accent-purple); margin-bottom: 18px; display: block; }
-    .service-card h3 { margin-bottom: 10px; }
-    .service-card p { color: var(--text-muted); font-size: 14px; }
-    .service-card ul { margin-top: 12px; list-style: none; }
-    .service-card ul li { font-size: 13px; color: var(--text-muted); margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
-    .service-card ul li i { font-size: 12px; color: var(--gold); margin: 0; }
-
-    /* Digital Products Section */
-    .products-category-title {
-      font-size: 22px; margin: 30px 0 20px; padding-bottom: 8px;
-      border-bottom: 2px solid var(--gold); color: var(--navy); display: inline-block;
-    }
-    .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
-    .product-card {
-      background: var(--card-bg); border: 1px solid var(--border-line);
-      border-radius: 12px; padding: 20px; display: flex; flex-direction: column;
-      justify-content: space-between; transition: 0.3s ease;
-    }
-    .product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--navy-light); }
-    .product-name { font-size: 16px; font-weight: 700; color: var(--text-main); margin-bottom: 6px; }
-    .product-desc { font-size: 13px; color: var(--text-muted); margin-bottom: 14px; flex-grow: 1; }
-    .product-price { font-size: 18px; font-weight: 700; color: var(--accent-purple); }
-
-    /* Portfolio Section */
-    .portfolio { background: #eef3f9; }
-    .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .project-card {
-      background: #ffffff; border: 1px solid var(--border-line);
-      border-radius: 12px; overflow: hidden; transition: 0.3s ease;
-    }
-    .project-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-    .project-img { height: 200px; background: #cbd5e1; display: flex; align-items: center; justify-content: center; color: var(--text-muted); }
-    .project-info { padding: 20px; }
-    .project-info span { font-size: 11px; text-transform: uppercase; color: var(--accent-purple); font-weight: 700; letter-spacing: 1px; }
-
-    /* About Section */
-    .about-box {
-      background: #ffffff; border: 1px solid var(--border-line); border-radius: 16px;
-      padding: 40px; box-shadow: var(--shadow);
-    }
-    .about-points { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 24px; }
-    .point-item { display: flex; gap: 12px; font-size: 15px; color: var(--text-muted); }
-    .point-item i { color: var(--accent-purple); font-size: 18px; margin-top: 2px; }
-
-    /* Contact Section */
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
-    .contact-card { background: #ffffff; border: 1px solid var(--border-line); border-radius: 16px; padding: 32px; }
-    .contact-info-item { display: flex; gap: 16px; margin-bottom: 22px; align-items: center; }
-    .contact-info-item i { font-size: 22px; color: var(--accent-purple); }
-    .contact-info-item small { display: block; font-size: 11px; text-transform: uppercase; color: var(--text-muted); letter-spacing: 1px; }
-    .contact-info-item div { font-size: 15px; font-weight: 600; }
-    
-    .contact-form input, .contact-form textarea {
-      width: 100%; padding: 12px 14px; margin-bottom: 14px; border: 1px solid #cbd5e1;
-      border-radius: 8px; font-family: inherit; font-size: 14px;
-    }
-    .contact-form textarea { resize: vertical; height: 120px; }
-
-    /* Footer */
-    footer.ek-footer {
-      margin-left: 230px; background: var(--navy); color: #ffffff;
-      padding: 50px 6vw 24px; border-top: 3px solid var(--gold);
-    }
-    .ek-footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; }
-    .ek-footer h3, .ek-footer h4 { color: #ffffff; margin-bottom: 14px; }
-    .ek-footer p, .ek-footer a { color: rgba(255, 255, 255, 0.8); font-size: 14px; line-height: 1.6; }
-    .ek-footer a:hover { color: var(--gold); }
-    .ek-footer-column { display: flex; flex-direction: column; gap: 8px; }
-    .ek-footer-bottom {
-      margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.15);
-      text-align: center; font-size: 13px; color: rgba(255, 255, 255, 0.7);
-    }
-
-    /* Floating WhatsApp Button */
-    .wa-float {
-      position: fixed; right: 22px; bottom: 22px; z-index: 1100;
-      background: #25d366; color: #ffffff; width: 56px; height: 56px;
-      border-radius: 50%; display: grid; place-items: center; font-size: 28px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.25); transition: 0.3s ease;
-    }
-    .wa-float:hover { transform: scale(1.08); }
-
-    /* Responsive Breakpoints */
-    @media (max-width: 1024px) {
-      .product-grid { grid-template-columns: repeat(3, 1fr); }
-      .service-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 900px) {
-      .sidebar { display: none; }
-      .mobile-head { display: flex; }
-      main { margin-left: 0; padding-top: 98px; }
-      footer.ek-footer { margin-left: 0; }
-      .product-grid { grid-template-columns: repeat(2, 1fr); }
-      .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
-      .contact-grid { grid-template-columns: 1fr; }
-      .ek-footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
-    }
-    @media (max-width: 600px) {
-      section { padding: 60px 20px; }
-      .service-grid, .product-grid, .portfolio-grid, .about-points, .ek-footer-grid { grid-template-columns: 1fr; }
-      .actions { flex-direction: column; }
-      .btn { width: 100%; }
-    }
+    body { font-family: 'Poppins', sans-serif; margin:0; background:#fff; color:#222; }
+    header, footer { background:#0a1a3f; color:#fff; padding:20px; }
+    nav { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; }
+    nav a { color:#fff; text-decoration:none; margin:0 10px; font-weight:500; }
+    nav a:hover { color:#d4af37; }
+    .btn { display:inline-block; padding:10px 20px; border-radius:5px; text-decoration:none; }
+    .btn-gold { background:#d4af37; color:#0a1a3f; font-weight:bold; }
+    .btn-gold:hover { background:#b38b2f; }
+    h1,h2,h3,h4 { color:#0a1a3f; }
+    section { padding:50px 20px; max-width:1100px; margin:auto; }
+    .grid { display:grid; gap:20px; }
+    .grid-3 { grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); }
+    .card { background:#f9f9f9; padding:20px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
+    footer { text-align:center; font-size:14px; }
+    blockquote { font-style:italic; color:#0a1a3f; border-left:4px solid #d4af37; padding-left:10px; }
+    input, textarea { width:100%; padding:10px; margin:5px 0; border:1px solid #ccc; border-radius:5px; }
+    button { border:none; cursor:pointer; }
+    @media(max-width:768px){ nav{flex-direction:column;} }
   </style>
 </head>
 <body>
 
-  <!-- Top Announcement Bar -->
-  <div class="topbar">
-    <div class="ticker">
-      Eaglesight Kreation · <b>Elevating Your Vision, From Concept to Creation.</b>
-    </div>
-  </div>
-
-  <!-- Mobile Header -->
-  <header class="mobile-head">
-    <div class="mobile-brand">Eaglesight Kreation</div>
-    <button class="mobile-nav-toggle" id="menuToggle" aria-label="Toggle Menu">
-      <i class="bi bi-list"></i>
-    </button>
-  </header>
-
-  <!-- Mobile Menu Drawer -->
-  <nav class="mobile-drawer" id="mobileDrawer">
-    <a href="#home" onclick="toggleMobileMenu()">Home</a>
-    <a href="#services" onclick="toggleMobileMenu()">Services</a>
-    <a href="#products" onclick="toggleMobileMenu()">Digital Products</a>
-    <a href="#portfolio" onclick="toggleMobileMenu()">Portfolio</a>
-    <a href="#about" onclick="toggleMobileMenu()">About</a>
-    <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
-    <a href="https://wa.me/233000000000?text=Hello%20Eaglesight%20Kreation,%20I%20want%20to%20start%20a%20project" target="_blank" style="color:var(--gold); font-weight:700;">Start a Project</a>
-  </nav>
-
-  <!-- Desktop Sidebar Navigation -->
-  <aside class="sidebar">
-    <div class="logo-wrap">
-      <div class="brand-title">
-        Eaglesight Kreation
-        <small>DIGITAL AGENCY</small>
-      </div>
-    </div>
-    <nav class="nav">
-      <a href="#home" class="active"><i class="bi bi-house"></i> Home</a>
-      <a href="#services"><i class="bi bi-briefcase"></i> Services</a>
-      <a href="#products"><i class="bi bi-bag-check"></i> Digital Products</a>
-      <a href="#portfolio"><i class="bi bi-folder2-open"></i> Portfolio</a>
-      <a href="#about"><i class="bi bi-info-circle"></i> About</a>
-      <a href="#contact"><i class="bi bi-envelope"></i> Contact</a>
-      <a href="https://wa.me/233000000000?text=Hello%20Eaglesight%20Kreation,%20I%20want%20to%20start%20a%20project" target="_blank" class="nav-cta"><i class="bi bi-rocket-takeoff"></i> Start a Project</a>
-    </nav>
-    <div class="side-bottom">
-      <p>&copy; 2026 Eaglesight Kreation</p>
-    </div>
-  </aside>
-
-  <main>
-    <!-- HOME SECTION -->
-    <section id="home" class="hero">
-      <div class="container">
-        <span class="eyebrow">Creative & Digital Solutions</span>
-        <h1>Eaglesight Kreation</h1>
-        <p class="lead">Elevating Your Vision, From Concept to Creation.</p>
-        <p style="color: var(--text-muted); margin-top: 12px; max-width: 650px;">
-          We are a full-service digital agency helping entrepreneurs, small businesses, startups, and students streamline their work, establish premium brand presences, and access practical digital resources.
-        </p>
-        <div class="gold-line"></div>
-        
-        <div class="actions">
-          <a href="https://wa.me/233000000000?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20work%20with%20you." target="_blank" class="btn btn-primary">
-            <i class="bi bi-chat-dots-fill"></i> Work With Us
-          </a>
-          <a href="#products" class="btn btn-secondary">
-            <i class="bi bi-bag-fill"></i> Explore Digital Products
-          </a>
-        </div>
-
-        <!-- Dynamic Daily Inspiration Feature -->
-        <div class="daily-inspiration">
-          <span class="inspiration-tag"><i class="bi bi-lightning-charge-fill"></i> Today's Inspiration</span>
-          <div class="quote-text" id="dailyQuote">"Loading daily inspiration..."</div>
-          <div class="quote-author" id="dailyAuthor"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES SECTION -->
-    <section id="services" class="services">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">What We Offer</span>
-          <h2>Our Core Services</h2>
-          <p class="lead">Tailored digital, creative, and administrative support designed to save you time and grow your business.</p>
-        </div>
-
-        <div class="service-grid">
-          <!-- 1. Virtual Assistance -->
-          <div class="service-card">
-            <i class="bi bi-headset"></i>
-            <h3>Virtual Assistance</h3>
-            <p>Reliable administrative and operational support to keep your business running smoothly daily.</p>
-            <ul>
-              <li><i class="bi bi-check-circle-fill"></i> Data entry & File organization</li>
-              <li><i class="bi bi-check-circle-fill"></i> Administrative & Research support</li>
-              <li><i class="bi bi-check-circle-fill"></i> Email and calendar support</li>
-              <li><i class="bi bi-check-circle-fill"></i> Document formatting</li>
-            </ul>
-          </div>
-
-          <!-- 2. Graphic Design -->
-          <div class="service-card">
-            <i class="bi bi-palette"></i>
-            <h3>Graphic Design</h3>
-            <p>Eye-catching visual designs that communicate your message clearly and elevate your visual identity.</p>
-            <ul>
-              <li><i class="bi bi-check-circle-fill"></i> Social media graphics & Posters</li>
-              <li><i class="bi bi-check-circle-fill"></i> Flyers & Business cards</li>
-              <li><i class="bi bi-check-circle-fill"></i> Presentations & Decks</li>
-              <li><i class="bi bi-check-circle-fill"></i> Basic branding packages</li>
-            </ul>
-          </div>
-
-          <!-- 3. Web Design & Development -->
-          <div class="service-card">
-            <i class="bi bi-code-slash"></i>
-            <h3>Web Design & Development</h3>
-            <p>Modern, responsive, fast-loading websites built to convert visitors into loyal clients.</p>
-            <ul>
-              <li><i class="bi bi-check-circle-fill"></i> Business & Portfolio websites</li>
-              <li><i class="bi bi-check-circle-fill"></i> High-converting landing pages</li>
-              <li><i class="bi bi-check-circle-fill"></i> Small business websites</li>
-              <li><i class="bi bi-check-circle-fill"></i> Website maintenance</li>
-            </ul>
-          </div>
-
-          <!-- 4. Digital Marketing -->
-          <div class="service-card">
-            <i class="bi bi-graph-up-arrow"></i>
-            <h3>Digital Marketing</h3>
-            <p>Strategic content planning and visibility support to grow your online brand effectively.</p>
-            <ul>
-              <li><i class="bi bi-check-circle-fill"></i> Social media content planning</li>
-              <li><i class="bi bi-check-circle-fill"></i> Basic SEO optimization</li>
-              <li><i class="bi bi-check-circle-fill"></i> Digital presence strategy</li>
-              <li><i class="bi bi-check-circle-fill"></i> Online brand growth support</li>
-            </ul>
-          </div>
-
-          <!-- 5. AI-Powered Business Support -->
-          <div class="service-card">
-            <i class="bi bi-cpu"></i>
-            <h3>AI-Powered Business Support</h3>
-            <p>Practical AI workflows and solutions to accelerate productivity and business research.</p>
-            <ul>
-              <li><i class="bi bi-check-circle-fill"></i> AI-assisted business research</li>
-              <li><i class="bi bi-check-circle-fill"></i> Content creation workflows</li>
-              <li><i class="bi bi-check-circle-fill"></i> Business productivity optimization</li>
-              <li><i class="bi bi-check-circle-fill"></i> Practical AI solutions for SMBs</li>
-            </ul>
-          </div>
-
-          <!-- 6. UI/UX Design -->
-          <div class="service-card">
-            <i class="bi bi-layout-text-window-reverse"></i>
-            <h3>UI/UX Design</h3>
-            <p>Intuitive and user-friendly digital interfaces designed for optimal customer engagement.</p>
-            <ul>
-              <li><i class="bi bi-check-circle-fill"></i> Website interfaces</li>
-              <li><i class="bi bi-check-circle-fill"></i> Mobile app interfaces</li>
-              <li><i class="bi bi-check-circle-fill"></i> Wireframes & Prototypes</li>
-              <li><i class="bi bi-check-circle-fill"></i> User experience audits</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- DIGITAL PRODUCTS SECTION -->
-    <section id="products">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Ready-To-Use Resources</span>
-          <h2>Digital Products & Tools</h2>
-          <p class="lead">Affordable, practical ready-made digital files designed to streamline study, productivity, and small business operations.</p>
-        </div>
-
-        <!-- Student Products Sub-Section -->
-        <h3 class="products-category-title"><i class="bi bi-mortarboard-fill"></i> Student Essentials</h3>
-        <div class="product-grid">
-          
-          <div class="product-card">
-            <div>
-              <div class="product-name">Study Planner</div>
-              <div class="product-desc">Organize daily study routines, lecture topics, and revision goals.</div>
-            </div>
-            <div>
-              <div class="product-price">GHS 2</div>
-              <a href="https://wa.me/233000000000?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20purchase%20Study%20Planner%20for%20GHS%202." target="_blank" class="btn btn-whatsapp">
-                <i class="bi bi-whatsapp"></i> Buy via WhatsApp
-              </a>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div>
-              <div class="product-name">Student Budget Planner</div>
-              <div class="product-desc">Track monthly stipends, campus expenses, and savings goals easily.</div>
-            </div>
-            <div>
-              <div class="product-price">GHS 2</div>
-              <a href="https://wa.me/233000000000?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20purchase%20Student%20Budget%20Planner%20for%20GHS%202." target="_blank" class="btn btn-whatsapp">
-                <i class="bi bi-whatsapp"></i> Buy via WhatsApp
-              </a>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div>
-              <div class="product-name">Assignment Tracker</div>
-              <div class="product-desc">Keep track of academic submission deadlines, requirements, and grades.</div>
-            </div>
-            <div>
-              <div class="product-price">GHS 2</div>
-              <a href="https://wa.me/233000000000?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20purchase%20Assignment%20Tracker%20for%20GHS%202." target="_blank" class="btn btn-whatsapp">
-                <i class="bi bi-whatsapp"></i> Buy via WhatsApp
-              </a>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div>
-              <div class="product-name">Exam Revision Planner</div>
-              <div class="product-desc">Structured timetables for exam prep and key concept reviews.</div>
-            </div>
-            <div>
-              <div class="product-price">GHS 2</div>
-              <a href="https://wa.me/233000000000?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20purchase%20Exam%20Revision%20Planner%20for%20GHS%202." target="_blank" class="btn btn-whatsapp">
-                <i class="bi bi-whatsapp"></i> Buy via WhatsApp
-              </a>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div>
-              <div class="product-name">Internship Application Tracker</div>
-              <div class="product-desc">Organize application statuses, company contacts, and interview dates.</div>
-            </div>
-            <div>
-              <div class="product-price">GHS 2</div>
-              <a href="https://wa.me/233000000000?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20purchase%20Internship%20Application%20Tracker%20for%20GHS%202." target="_blank" class="btn btn-whatsapp">
-                <i class="bi bi-whatsapp"></i> Buy via WhatsApp
-              </a>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div>
-              <div class="product-name">Student AI Prompt Pack</div>
-              <div class="product-desc">Curated ChatGPT/AI prompts for research assistance and study summaries.</div>
-            </div>
-            <div>
-              <div class="product-price">GHS 5</div>
-              <a href="https://wa.me/233000000000?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20purchase%20Student%20AI%20Prompt%20Pack%20for%20GHS%205." target="_blank" class="btn btn-whatsapp">
-                <i class="bi bi-whatsapp"></i> Buy via WhatsApp
-              </a>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div>
-              <div class="product-name">Student CV Template</div>
-              <div class="product-desc">Clean, professional CV layout designed specifically for university students.</div>
-            </div>
-            <div>
-              <div class="product-price">GHS 5</div>
-              <a href="https://wa.me/233000000000?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20purchase%20Student%20CV%20Template%20for%20GHS%205." target="_blank" class="btn btn-whatsapp">
-                <i class="bi bi-whatsapp"></i> Buy via WhatsApp
-              </a>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div>
-              <div class="product-name">University Survival Guide</div>
-              <div class="product-desc">Practical guide covering academic success, time management, and campus life.</div>
-            </div>
-            <div>
-              <div class="product-price">GHS 5</div>
-              <a href="https://wa.me/233000000000?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20purchase%20University%20Survival%20Guide%20for%20GHS%205." target="_blank" class="btn btn-whatsapp">
-                <i class="bi bi-whatsapp"></i> Buy via WhatsApp
-              </a>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Business Products Sub-Section -->
-        <h3 class="products-category-title" style="margin-top: 50px;"><i class="bi bi-building-gear"></i> Business Tools</h3>
-        <div class="product-grid">
-
-          <div class="product-card">
-            <div>
-              <div class="product-name">Customer Information Sheet</div>
-              <div class="product-desc">Simple sheet to organize essential customer data and service histories.</div>
-            </div>
-            <div>
-              <div class="product-price">GHS 2</div>
-              <a href="https://wa.me/233000000000?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20purchase%20Customer%20Information%20Sheet%20for%20GHS%202." target="_blank" class="btn btn-whatsapp">
-                <i class="bi bi-whatsapp"></i> Buy via WhatsApp
-              </a>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div>
-              <div class="product-name">Data Entry Form</div>
-              <div class="product-desc">Clean template to collect daily operational business data without errors.</div>
-            </div>
-            <div>
-              <div class="product-price">GHS 2</div>
-              <a href="https://wa.me/233000000000?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20purchase%20Data%20Entry%20Form%20for%20GHS%202." target="_blank" class="btn btn-whatsapp">
-                <i class="bi bi-whatsapp"></i> Buy via WhatsApp
-              </a>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div>
-              <div class="product-name">Customer/Contact Database</div>
-              <div class="product-desc">Organized spreadsheet to manage sales contacts, emails, and phone numbers.</div>
-            </div>
-            <div>
-              <div class="product-price">GHS 2</div>
-              <a href="https://wa.me/233000000000?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20purchase%20Customer/Contact%20Database%20for%20GHS%202." target="_blank" class="btn btn-whatsapp">
-                <i class="bi bi-whatsapp"></i> Buy via WhatsApp
-              </a>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div>
-              <div class="product-name">Sales Record Sheet</div>
-              <div class="product-desc">Track daily, weekly, and monthly business revenue and product sales.</div>
-            </div>
-            <div>
-              <div class="product-price">GHS 2</div>
-              <a href="https://wa.me/233000000000?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20purchase%20Sales%20Record%20Sheet%20for%20GHS%202." target="_blank" class="btn btn-whatsapp">
-                <i class="bi bi-whatsapp"></i> Buy via WhatsApp
-              </a>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div>
-              <div class="product-name">Business Expense Sheet</div>
-              <div class="product-desc">Monitor operating costs, vendor payments, and daily business cash flow.</div>
-            </div>
-            <div>
-              <div class="product-price">GHS 2</div>
-              <a href="https://wa.me/233000000000?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20purchase%20Business%20Expense%20Sheet%20for%20GHS%202." target="_blank" class="btn btn-whatsapp">
-                <i class="bi bi-whatsapp"></i> Buy via WhatsApp
-              </a>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div>
-              <div class="product-name">Inventory Record Sheet</div>
-              <div class="product-desc">Keep accurate track of stock levels, items sold, and reorder points.</div>
-            </div>
-            <div>
-              <div class="product-price">GHS 2</div>
-              <a href="https://wa.me/233000000000?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20purchase%20Inventory%20Record%20Sheet%20for%20GHS%202." target="_blank" class="btn btn-whatsapp">
-                <i class="bi bi-whatsapp"></i> Buy via WhatsApp
-              </a>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div>
-              <div class="product-name">Invoice Template</div>
-              <div class="product-desc">Professional, ready-to-fill printable invoice for client billing.</div>
-            </div>
-            <div>
-              <div class="product-price">GHS 2</div>
-              <a href="https://wa.me/233000000000?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20purchase%20Invoice%20Template%20for%20GHS%202." target="_blank" class="btn btn-whatsapp">
-                <i class="bi bi-whatsapp"></i> Buy via WhatsApp
-              </a>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div>
-              <div class="product-name">Employee Records Sheet</div>
-              <div class="product-desc">Maintain essential staff details, roles, and attendance records easily.</div>
-            </div>
-            <div>
-              <div class="product-price">GHS 2</div>
-              <a href="https://wa.me/233000000000?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20purchase%20Employee%20Records%20Sheet%20for%20GHS%202." target="_blank" class="btn btn-whatsapp">
-                <i class="bi bi-whatsapp"></i> Buy via WhatsApp
-              </a>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div>
-              <div class="product-name">Business AI Prompt Pack</div>
-              <div class="product-desc">Time-saving AI prompts for marketing copy, customer replies, and research.</div>
-            </div>
-            <div>
-              <div class="product-price">GHS 5</div>
-              <a href="https://wa.me/233000000000?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20purchase%20Business%20AI%20Prompt%20Pack%20for%20GHS%205." target="_blank" class="btn btn-whatsapp">
-                <i class="bi bi-whatsapp"></i> Buy via WhatsApp
-              </a>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div>
-              <div class="product-name">Simple Business Planner</div>
-              <div class="product-desc">Step-by-step roadmap to plan goals, target markets, and budget priorities.</div>
-            </div>
-            <div>
-              <div class="product-price">GHS 5</div>
-              <a href="https://wa.me/233000000000?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20purchase%20Simple%20Business%20Planner%20for%20GHS%205." target="_blank" class="btn btn-whatsapp">
-                <i class="bi bi-whatsapp"></i> Buy via WhatsApp
-              </a>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div>
-              <div class="product-name">Invoice & Sales Workbook</div>
-              <div class="product-desc">All-in-one workbook combining invoicing, sales logging, and cash tracking.</div>
-            </div>
-            <div>
-              <div class="product-price">GHS 5</div>
-              <a href="https://wa.me/233000000000?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20purchase%20Invoice%20%26%20Sales%20Workbook%20for%20GHS%205." target="_blank" class="btn btn-whatsapp">
-                <i class="bi bi-whatsapp"></i> Buy via WhatsApp
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- PORTFOLIO SECTION -->
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Our Work</span>
-          <h2>Featured Portfolio</h2>
-          <p class="lead">A showcase of design concepts, web projects, and practical solutions delivered by Eaglesight Kreation.</p>
-        </div>
-
-        <div class="portfolio-grid">
-          <div class="project-card">
-            <div class="project-img"><i class="bi bi-window-sidebar" style="font-size:40px;"></i></div>
-            <div class="project-info">
-              <span>Web Development</span>
-              <h3>Corporate Service Website Layout</h3>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-img"><i class="bi bi-brush" style="font-size:40px;"></i></div>
-            <div class="project-info">
-              <span>Brand Identity</span>
-              <h3>Social Media Graphics Package</h3>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <div class="project-img"><i class="bi bi-file-earmark-spreadsheet" style="font-size:40px;"></i></div>
-            <div class="project-info">
-              <span>Digital Tools</span>
-              <h3>Custom Business Tracker Systems</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section id="about">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Who We Are</span>
-          <h2>About Eaglesight Kreation</h2>
-        </div>
-
-        <div class="about-box">
-          <p style="font-size: 17px; line-height: 1.7; color: var(--text-main);">
-            <strong>Eaglesight Kreation</strong> is a modern digital services agency focused on delivering practical digital, creative, and administrative solutions. We assist small businesses, startups, entrepreneurs, and students in turning ideas into structured, professional results.
-          </p>
-
-          <div class="about-points">
-            <div class="point-item">
-              <i class="bi bi-check-circle-fill"></i>
-              <div><strong>Save Valuable Time:</strong> We handle administrative, design, and technical workloads so you can focus on core growth.</div>
-            </div>
-
-            <div class="point-item">
-              <i class="bi bi-check-circle-fill"></i>
-              <div><strong>Elevate Brand Presence:</strong> Premium visual design and web solutions that build instant trust with your clients.</div>
-            </div>
-
-            <div class="point-item">
-              <i class="bi bi-check-circle-fill"></i>
-              <div><strong>Practical Solutions:</strong> Down-to-earth tools and ready-to-use digital templates accessible to everyone.</div>
-            </div>
-
-            <div class="point-item">
-              <i class="bi bi-check-circle-fill"></i>
-              <div><strong>End-to-End Execution:</strong> From early concept strategy to final delivery, we bring clarity to your vision.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact" style="background:#eef3f9;">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Get In Touch</span>
-          <h2>Start a Project With Us</h2>
-          <p class="lead">Have a project in mind or need custom assistance? Contact us today to get started.</p>
-        </div>
-
-        <div class="contact-grid">
-          <div class="contact-card">
-            <div class="contact-info-item">
-              <i class="bi bi-whatsapp"></i>
-              <div>
-                <small>WhatsApp / Call</small>
-                <span>+233 (0) 00 000 0000</span>
-              </div>
-            </div>
-
-            <div class="contact-info-item">
-              <i class="bi bi-envelope"></i>
-              <div>
-                <small>Email</small>
-                <span>contact@eaglesightkreation.com</span>
-              </div>
-            </div>
-
-            <div class="contact-info-item">
-              <i class="bi bi-geo-alt"></i>
-              <div>
-                <small>Location</small>
-                <span>Takoradi, Ghana</span>
-              </div>
-            </div>
-
-            <a href="https://wa.me/233000000000?text=Hello%20Eaglesight%20Kreation,%20I%20want%20to%20start%20a%20project" target="_blank" class="btn btn-primary" style="width: 100%; margin-top: 15px;">
-              <i class="bi bi-whatsapp"></i> Chat Direct on WhatsApp
-            </a>
-          </div>
-
-          <div class="contact-card">
-            <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you! Your message has been recorded. Please reach out via WhatsApp for immediate response.');">
-              <input type="text" placeholder="Your Name" required>
-              <input type="email" placeholder="Your Email Address" required>
-              <textarea placeholder="Tell us about your project or inquiry..." required></textarea>
-              <button type="submit" class="btn btn-secondary" style="width: 100%;">Send Message</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="ek-footer">
-    <div class="ek-footer-grid">
+  <!-- ====== Header ====== -->
+  <header>
+    <nav>
+      <div><strong>Eaglesight Kreation</strong></div>
       <div>
-        <h3>Eaglesight Kreation</h3>
-        <p>Elevating Your Vision, From Concept to Creation.</p>
-        <p style="margin-top: 10px; font-size: 13px;">Helping businesses, entrepreneurs, and students with creative, digital, and administrative solutions.</p>
-      </div>
-
-      <div class="ek-footer-column">
-        <h4>Navigation</h4>
         <a href="#home">Home</a>
         <a href="#services">Services</a>
         <a href="#products">Digital Products</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
+        <a href="#contact" class="btn btn-gold">Start a Project</a>
       </div>
+    </nav>
+  </header>
 
-      <div class="ek-footer-column">
-        <h4>Services</h4>
-        <a href="#services">Virtual Assistance</a>
-        <a href="#services">Graphic Design</a>
-        <a href="#services">Web Development</a>
-        <a href="#services">Digital Marketing</a>
-        <a href="#services">AI Support</a>
-        <a href="#services">UI/UX Design</a>
-      </div>
+  <!-- ====== Hero ====== -->
+  <section id="home">
+    <h1>Elevating Your Vision, From Concept to Creation.</h1>
+    <p>Eaglesight Kreation is a digital services agency helping businesses, entrepreneurs, startups and individuals with creative, digital and administrative needs.</p>
+    <a href="#services" class="btn btn-gold">Work With Us</a>
+    <a href="#products" class="btn btn-gold">Explore Digital Products</a>
+  </section>
 
-      <div class="ek-footer-column">
-        <h4>Connect</h4>
-        <a href="https://wa.me/233000000000" target="_blank"><i class="bi bi-whatsapp"></i> WhatsApp</a>
-        <a href="#contact"><i class="bi bi-envelope"></i> Email Support</a>
-      </div>
+  <!-- ====== Daily Inspiration ====== -->
+  <section id="inspiration">
+    <h2>Today's Inspiration</h2>
+    <div id="daily-quote"></div>
+  </section>
+
+  <!-- ====== Services ====== -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="grid grid-3">
+      <div class="card"><h3>Virtual Assistance</h3><p>Data entry, admin support, research, email/calendar, docs.</p></div>
+      <div class="card"><h3>Graphic Design</h3><p>Social media graphics, flyers, posters, business cards.</p></div>
+      <div class="card"><h3>Web Design & Development</h3><p>Business websites, landing pages, portfolios, maintenance.</p></div>
+      <div class="card"><h3>Digital Marketing</h3><p>Social content, planning, SEO, online brand growth.</p></div>
+      <div class="card"><h3>AI-Powered Business Support</h3><p>AI research, content support, productivity workflows.</p></div>
+      <div class="card"><h3>UI/UX Design</h3><p>Interfaces, mobile design, user experience improvement.</p></div>
+    </div>
+  </section>
+
+  <!-- ====== Digital Products ====== -->
+  <section id="products">
+    <h2>Digital Products</h2>
+
+    <h3>Student Products</h3>
+    <div class="grid grid-3">
+      <div class="card"><h4>Study Planner</h4><p>Organize study sessions.</p><p><strong>GHS 2</strong></p>
+        <a href="https://wa.me/233201046816?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20purchase%20Study%20Planner%20for%20GHS%202." class="btn btn-gold">Buy via WhatsApp</a></div>
+      <div class="card"><h4>Student Budget Planner</h4><p>Track expenses easily.</p><p><strong>GHS 2</strong></p>
+        <a href="https://wa.me/233201046816?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20purchase%20Student%20Budget%20Planner%20for%20GHS%202." class="btn btn-gold">Buy via WhatsApp</a></div>
+      <div class="card"><h4>Assignment Tracker</h4><p>Stay on top of assignments.</p><p><strong>GHS 2</strong></p>
+        <a href="https://wa.me/233201046816?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20purchase%20Assignment%20Tracker%20for%20GHS%202." class="btn btn-gold">Buy via WhatsApp</a></div>
     </div>
 
-    <div class="ek-footer-bottom">
-      <p>&copy; 2026 Eaglesight Kreation. All Rights Reserved.</p>
+    <h3>Business Products</h3>
+    <div class="grid grid-3">
+      <div class="card"><h4>Customer Information Sheet</h4><p>Record customer details.</p><p><strong>GHS 2</strong></p>
+        <a href="https://wa.me/233201046816?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20purchase%20Customer%20Information%20Sheet%20for%20GHS%202." class="btn btn-gold">Buy via WhatsApp</a></div>
+      <div class="card"><h4>Invoice Template</h4><p>Simple invoice format.</p><p><strong>GHS 2</strong></p>
+        <a href="https://wa.me/233201046816?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20purchase%20Invoice%20Template%20for%20GHS%202." class="btn btn-gold">Buy via WhatsApp</a></div>
+      <div class="card"><h4>Business Planner</h4><p>Plan your business activities.</p><p><strong>GHS 5</strong></p>
+        <a href="https://wa.me/233201046816?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20purchase%20Business%20Planner%20for%20GHS%205." class="btn btn-gold">Buy via WhatsApp</a></div>
     </div>
-  </footer>
+  </section>
 
-  <!-- Floating WhatsApp CTA -->
-  <a href="https://wa.me/233000000000?text=Hello%20Eaglesight%20Kreation,%20I%20have%20an%20inquiry." target="_blank" class="wa-float" aria-label="Contact on WhatsApp">
-    <i class="bi bi-whatsapp"></i>
-  </a>
+  <!-- ====== Portfolio ====== -->
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <p>Showcase of past projects (add your real samples here).</p>
+  </section>
 
-  <!-- JavaScript for Daily Quote Engine & Navigation -->
-  <script>
-    // 1. Automatic Daily Inspiration System (Date-based rotation)
-    const quotes = [
-      { quote: "Your idea can become your next possibility. Stay focused and execute.", author: "Eaglesight Kreation" },
-      { quote: "Small daily improvements over time lead to stunning results.", author: "Robin Sharma" },
-      { quote: "Action is the foundational key to all success.", author: "Pablo Picasso" },
-      { quote: "Opportunities don't happen. You create them.", author: "Chris Grosser" },
-      { quote: "Consistency is what transforms average into excellence.", author: "Anonymous" },
-      { quote: "Do not wait to strike till the iron is hot; but make it hot by striking.", author: "William Butler Yeats" },
-      { quote: "Quality means doing it right when no one is looking.", author: "Henry Ford" },
-      { quote: "Creativity is intelligence having fun.", author: "Albert Einstein" },
-      { quote: "Productivity is never an accident. It is always the result of a commitment to excellence.", author: "Paul J. Meyer" },
-      { quote: "Success usually comes to those who are too busy to be looking for it.", author: "Henry David Thoreau" }
-    ];
+  <!-- ====== About ====== -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Eaglesight Kreation helps businesses and individuals with practical digital solutions. Our goal is to save you time, improve your digital presence, and turn ideas into useful solutions.</p>
+  </section>
 
-    function setDailyQuote() {
-      const now = new Date();
-      const startOfYear = new Date(now.getFullYear(), 0, 0);
-      const diff = now - startOfYear;
-      const oneDay = 1000 * 60 * 60 * 24;
-      const dayOfYear = Math.floor(diff / oneDay);
-      
-      const selectedIndex = dayOfYear % quotes.length;
-      const todayData = quotes[selectedIndex];
-
-      document.getElementById('dailyQuote').textContent = `"${todayData.quote}"`;
-      document.getElementById('dailyAuthor').textContent = `— ${todayData.author}`;
-    }
-
-    // 2. Mobile Drawer Navigation Toggle
-    function toggleMobileMenu() {
-      const drawer = document.getElementById('mobileDrawer');
-      drawer.classList.toggle('open');
-    }
-
-    document.getElementById('menuToggle').addEventListener('click', toggleMobileMenu);
-
-    // Initialize daily quote on load
-    document.addEventListener('DOMContentLoaded', setDailyQuote);
-  </script>
-</body>
-</html>
+  <!-- ====== Contact ====== -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder
