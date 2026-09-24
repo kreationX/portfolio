@@ -5,22 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eaglesight Kreation</title>
   <style>
-    /* ====== Global Styles ====== */
     body { font-family: 'Poppins', sans-serif; margin:0; background:#fff; color:#222; }
     header, footer { background:#0a1a3f; color:#fff; padding:20px; }
-    nav { display:flex; justify-content:space-between; align-items:center; }
+    nav { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; }
     nav a { color:#fff; text-decoration:none; margin:0 10px; font-weight:500; }
     nav a:hover { color:#d4af37; }
     .btn { display:inline-block; padding:10px 20px; border-radius:5px; text-decoration:none; }
     .btn-gold { background:#d4af37; color:#0a1a3f; font-weight:bold; }
     .btn-gold:hover { background:#b38b2f; }
-    h1,h2,h3 { color:#0a1a3f; }
+    h1,h2,h3,h4 { color:#0a1a3f; }
     section { padding:50px 20px; max-width:1100px; margin:auto; }
     .grid { display:grid; gap:20px; }
     .grid-3 { grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); }
     .card { background:#f9f9f9; padding:20px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
     footer { text-align:center; font-size:14px; }
     blockquote { font-style:italic; color:#0a1a3f; border-left:4px solid #d4af37; padding-left:10px; }
+    input, textarea { width:100%; padding:10px; margin:5px 0; border:1px solid #ccc; border-radius:5px; }
+    button { border:none; cursor:pointer; }
     @media(max-width:768px){ nav{flex-direction:column;} }
   </style>
 </head>
@@ -51,7 +52,7 @@
   </section>
 
   <!-- ====== Daily Inspiration ====== -->
-  <section>
+  <section id="inspiration">
     <h2>Today's Inspiration</h2>
     <div id="daily-quote"></div>
   </section>
@@ -79,7 +80,8 @@
         <a href="https://wa.me/233201046816?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20purchase%20Study%20Planner%20for%20GHS%202." class="btn btn-gold">Buy via WhatsApp</a></div>
       <div class="card"><h4>Student Budget Planner</h4><p>Track expenses easily.</p><p><strong>GHS 2</strong></p>
         <a href="https://wa.me/233201046816?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20purchase%20Student%20Budget%20Planner%20for%20GHS%202." class="btn btn-gold">Buy via WhatsApp</a></div>
-      <!-- Add more student product cards here -->
+      <div class="card"><h4>Assignment Tracker</h4><p>Stay on top of assignments.</p><p><strong>GHS 2</strong></p>
+        <a href="https://wa.me/233201046816?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20purchase%20Assignment%20Tracker%20for%20GHS%202." class="btn btn-gold">Buy via WhatsApp</a></div>
     </div>
 
     <h3>Business Products</h3>
@@ -88,14 +90,15 @@
         <a href="https://wa.me/233201046816?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20purchase%20Customer%20Information%20Sheet%20for%20GHS%202." class="btn btn-gold">Buy via WhatsApp</a></div>
       <div class="card"><h4>Invoice Template</h4><p>Simple invoice format.</p><p><strong>GHS 2</strong></p>
         <a href="https://wa.me/233201046816?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20purchase%20Invoice%20Template%20for%20GHS%202." class="btn btn-gold">Buy via WhatsApp</a></div>
-      <!-- Add more business product cards here -->
+      <div class="card"><h4>Business Planner</h4><p>Plan your business activities.</p><p><strong>GHS 5</strong></p>
+        <a href="https://wa.me/233201046816?text=Hello%20Eaglesight%20Kreation,%20I%20would%20like%20to%20purchase%20Business%20Planner%20for%20GHS%205." class="btn btn-gold">Buy via WhatsApp</a></div>
     </div>
   </section>
 
   <!-- ====== Portfolio ====== -->
   <section id="portfolio">
     <h2>Portfolio</h2>
-    <p>Showcase of past projects (improve layout with real samples).</p>
+    <p>Showcase of past projects (add your real samples here).</p>
   </section>
 
   <!-- ====== About ====== -->
@@ -104,29 +107,3 @@
     <p>Eaglesight Kreation helps businesses and individuals with practical digital solutions. Our goal is to save you time, improve your digital presence, and turn ideas into useful solutions.</p>
   </section>
 
-  <!-- ====== Contact ====== -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required><br><br>
-      <input type="email" placeholder="Your Email" required><br><br>
-      <textarea placeholder="Your Message" required></textarea><br><br>
-      <button type="submit" class="btn btn-gold">Send Message</button>
-    </form>
-    <p>Email: eaglesightkreation@gmail.com</p>
-    <p>Phone/WhatsApp: +233 201046816</p>
-  </section>
-
-  <!-- ====== Footer ====== -->
-  <footer>
-    <p><strong>Eaglesight Kreation</strong> — Elevating Your Vision, From Concept to Creation.</p>
-    <p>&copy; 2026 Eaglesight Kreation. All rights reserved.</p>
-  </footer>
-
-  <!-- ====== Daily Quote Script ====== -->
-  <script>
-    const quotes = [
-      { text: "Success is not final, failure is not fatal: it is the courage to continue that counts.", author: "Winston Churchill" },
-      { text: "Discipline is the bridge between goals and accomplishment.", author: "Jim Rohn" },
-      { text: "Creativity is intelligence having fun.", author: "Albert Einstein" },
-      { text: "Small daily improvements lead to stunning results.",
